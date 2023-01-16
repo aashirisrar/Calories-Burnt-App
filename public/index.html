@@ -95,7 +95,7 @@
     <script>
       submit.addEventListener("click", (e) => {
         e.preventDefault();
-        let url = `http://localhost:3000/calculate?entry=${word.value}`;
+        let url = `http://localhost:3000/calculate?activity=${word.value}&weight=${word.value}&duration=${word.value}`;
         let r = fetch(url);
 
         r.then((response) => {

@@ -12,7 +12,11 @@ app.get("/calculate", (req, res) => {
   const options = {
     method: "GET",
     url: "https://calories-burned-by-api-ninjas.p.rapidapi.com/v1/caloriesburned",
-    params: { activity: req.query.entry },
+    params: {
+      activity: req.query.activity,
+      weight: req.query.weight,
+      duration: req.query.time,
+    },
     headers: {
       "X-RapidAPI-Key": "b8eb4c64d1msh82f4f5538e5065ap1d2b92jsn7113e96b5efb",
       "X-RapidAPI-Host": "calories-burned-by-api-ninjas.p.rapidapi.com",
