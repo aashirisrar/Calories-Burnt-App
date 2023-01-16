@@ -64,9 +64,25 @@
             type="text"
             class="form-control"
             id="word"
-            aria-describedby="emailHelp"
             placeholder="e.g Running"
           />
+          <div class="form-group mt-4">
+            <label for="weight">Weight (kgs)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="weight"
+              placeholder="e.g 65"
+            />
+          <div class="form-group mt-4">
+            <label for="duration">Duration (mins)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="duration"
+              placeholder="e.g 34"
+            />
+          </div>
         </div>
         <button id="submit" type="submit" class="btn btn-primary">
           Submit
@@ -95,7 +111,7 @@
     <script>
       submit.addEventListener("click", (e) => {
         e.preventDefault();
-        let url = `http://localhost:3000/calculate?activity=${word.value}&weight=${word.value}&duration=${word.value}`;
+        let url = `http://localhost:3000/calculate?activity=${word.value}&weight=${weight.value}&duration=${duration.value}`;
         let r = fetch(url);
 
         r.then((response) => {

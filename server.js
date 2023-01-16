@@ -15,7 +15,7 @@ app.get("/calculate", (req, res) => {
     params: {
       activity: req.query.activity,
       weight: req.query.weight,
-      duration: req.query.time,
+      duration: req.query.duration,
     },
     headers: {
       "X-RapidAPI-Key": "b8eb4c64d1msh82f4f5538e5065ap1d2b92jsn7113e96b5efb",
